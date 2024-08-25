@@ -1,8 +1,5 @@
 pipeline {
-    agent any // Use any available Jenkins agent
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '5'))
-    }
+    agent any
     // Environment variables
     environment {
         DOCKERHUB_CREDENTIALS = credentials('jenkins-dockerhub')
@@ -10,7 +7,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh 'echo Hello World!'
+                sh 'echo Hello Docker!'
             }
         }
         stage('Build') {
