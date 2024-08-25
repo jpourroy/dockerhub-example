@@ -9,7 +9,9 @@ pipeline {
     }
     stages {
         stage('Example') {
-            sh 'echo Hello World!'
+            steps {
+                sh 'echo Hello World!'
+            }
         }
         stage('Build') {
             steps {
