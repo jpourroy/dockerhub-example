@@ -8,6 +8,9 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('jenkins-dockerhub')
     }
     stages {
+        stage('Example') {
+            echo 'Hello World!'
+        }
         stage('Build') {
             steps {
                 sh 'docker build -t paulsp93/jp-alpine:latest .'
