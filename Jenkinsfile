@@ -5,7 +5,7 @@ pipeline {
     }
     // Environment variables
     environment {
-        DOCKERHUB_CREDENTIALS = credentoials('jenkins-dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('jenkins-dockerhub')
     }
     stages {
         stage('Build') {
